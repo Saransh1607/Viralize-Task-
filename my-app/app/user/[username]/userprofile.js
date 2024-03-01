@@ -1,3 +1,7 @@
+
+import React from 'react';
+import classes from './page.module.css';
+
 export default function UserProfile({ data }) {
   const {
     id,
@@ -11,32 +15,34 @@ export default function UserProfile({ data }) {
   } = data;
 
   return (
-    <div>
-      <h2>User Profile Information</h2>
-      <p>ID: {id}</p>
-      <p>Username: {username}</p>
-      <p>URL: <a href={url} target="_blank" rel="noopener noreferrer">{url}</a></p>
-      <p>Created At: {new Date(createdAt).toLocaleDateString()}</p>
-      <p>Last Seen At: {new Date(seenAt).toLocaleDateString()}</p>
+    <div className={classes.UserProfile}>
+      <header><h2>User Profile Information</h2></header>
+      <main>
+        <p>ID: {id}</p>
+        <p>Username: {username}</p>
+        <p>URL: <a href={url} target="_blank" rel="noopener noreferrer">{url}</a></p>
+        <p>Created At: {new Date(createdAt).toLocaleDateString()}</p>
+        <p>Last Seen At: {new Date(seenAt).toLocaleDateString()}</p>
 
-      <h3>Performance Ratings</h3>
-      <ul>
-        {Object.entries(perfs).map(([category, info]) => (
-          <li key={category}>
-            {category}: Games - {info.games}, Rating - {info.rating}, RD - {info.rd}, Progress - {info.prog}
-          </li>
-        ))}
-      </ul>
+        <h3>Performance Ratings</h3>
+        <ul>
+          {Object.entries(perfs).map(([category, info]) => (
+            <li key={category}>
+              {category}: Games - {info.games}, Rating - {info.rating}, RD - {info.rd}, Progress - {info.prog}
+            </li>
+          ))}
+        </ul>
 
-      <h3>Play Time</h3>
-      <p>Total Play Time: {playTime.total} seconds</p>
+        <h3>Play Time</h3>
+        <p>Total Play Time: {playTime.total} seconds</p>
 
-      <h3>Game Counts</h3>
-      <ul>
-        {Object.entries(count).map(([type, value]) => (
-          <li key={type}>{type}: {value}</li>
-        ))}
-      </ul>
+        <h3>Game Counts</h3>
+        <ul>
+          {Object.entries(count).map(([type, value]) => (
+            <li key={type}>{type}: {value}</li>
+          ))}
+        </ul>
+      </main>
     </div>
   );
 }

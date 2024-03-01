@@ -1,0 +1,57 @@
+.UserProfile {
+  display: centre;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.UserProfile header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.UserProfile h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.UserProfile h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.UserProfile p,
+.UserProfile li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.UserProfile a {
+  color: #007bff;
+}
+
+.UserProfile a:hover {
+  text-decoration: underline;
+}
+
+.UserProfile ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.UserProfile li:before {
+  content: "•";
+  margin-right: 5px;
+}
+
+.UserProfile li {
+  margin-left: 20px;
+}
