@@ -9,16 +9,12 @@ const headers = {
   Authorization: 'Bearer ' + process.env.lichessToken,
 };
 
-axios('https://lichess.org/api/account', { headers })
-  .then(res => res.json())
-  .then(console.log);
 app.use(express.json());
 
 app.get('/api/profile/:username', async (req, res) => {
     try {
         const { username } = req.params;
-      const response = await axios('https://lichess.org/api/account', { headers }).then(res => res.json())
-      .then(console.log);
+      const response = await axios('https://lichess.org/api/account', { headers });
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' });
