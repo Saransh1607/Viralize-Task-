@@ -55,3 +55,19 @@
 .UserProfile li {
   margin-left: 20px;
 }
+
+/* body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+input[type="text"], button {
+  margin: 5px;
+  padding: 5px;
+}
+
+#profileInfo, #currentGames, #searchResults, #gameSummary {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+} */

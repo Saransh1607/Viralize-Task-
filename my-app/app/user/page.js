@@ -13,8 +13,8 @@ export default function UserPage({ params })  // The name of the function is the
  
     return (
         <div>
-            <h1>User Page</h1>
-        <p>Welcome to the user page of our website</p>
+            <h1>User Detail</h1>
+        {/* <p>Welcome to the user page of our website</p> */}
   
         <suspense>
           <ded/>
